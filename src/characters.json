@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "lights",
+        "image": "https://www.w3schools.com/w3css/img_lights.jpg"
+    },
+    {
+        "id": 2,
+        "name": "bridge",
+        "image": "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+        "id": 3,
+        "name": "mountain",
+        "image": "https://www.w3schools.com/howto/img_snow.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Swan",
+        "image": "https://html5box.com/html5gallery/images/Swan_1024.jpg"
+    }
+]
