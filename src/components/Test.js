@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card";
 
 class Test extends React.Component {
   // Initial state
@@ -24,14 +25,30 @@ class Test extends React.Component {
     return (
 
       <div>
-        <p>Score: {this.state.score}</p>
-        <p>High Score: {this.state.highScore}</p>
-        <button className="btn btn-primary" onClick={this.handleIncrement}>
-          +1
+        <div className="container">
+          <p>Score: {this.state.score}</p>
+          <p>High Score: {this.state.highScore}</p>
+          <button className="btn btn-primary" onClick={this.handleIncrement}>
+            +1
           </button>
-        <button className="btn btn-secondary" onClick={this.handleReset}>
-          Reset
+          <button className="btn btn-secondary" onClick={this.handleReset}>
+            Reset
           </button>
+          <div className="row">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
+        </div>
       </div>
 
     );
