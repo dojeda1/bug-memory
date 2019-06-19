@@ -7,23 +7,37 @@ class App extends React.Component {
   state = {
     score: 0,
     highScore: 0,
-    characters
+    characters,
+    chosen: []
   };
 
   // Increments score by 1
-  handleIncrement = () => {
-    if (this.state.score >= this.state.highScore) {
-      this.setState({ score: this.state.score + 1, highScore: this.state.highScore + 1 });
+  handleClick = (event) => {
+
+    const id = event.target.getAttribute('data-id');
+    console.log("id: " + id);
+
+    if (this.state.chosen.includes(id)) {
+      console.log("You Lose");
+
+      this.setState({ score: 0, chosen: [] });
+
     } else {
-      this.setState({ score: this.state.score + 1 });
+      console.log("not yet chosen");
+
+      this.state.chosen.push(id);
+      console.log(this.state.chosen);
+
+      if (this.state.score >= this.state.highScore) {
+        this.setState({ score: this.state.score + 1, highScore: this.state.highScore + 1 });
+      } else {
+        this.setState({ score: this.state.score + 1 });
+      }
+
     }
 
-    this.shuffle(this.state.characters)
+    this.shuffle(this.state.characters);
   };
-
-  handleReset = () => {
-    this.setState({ score: 0 });
-  }
 
   shuffle = (array) => {
 
@@ -32,7 +46,6 @@ class App extends React.Component {
       [array[i], array[j]] = [array[j], array[i]]; // swap elements
     }
 
-    this.setState({ character: array });
   }
 
   render() {
@@ -42,19 +55,11 @@ class App extends React.Component {
         <div className="container">
           <p>Score: {this.state.score}</p>
           <p>High Score: {this.state.highScore}</p>
-          <button className="btn btn-primary" onClick={this.handleIncrement}>
-            +1
-          </button>
-          <button className="btn btn-secondary" onClick={this.handleReset}>
-            Reset
-          </button>
-          {/* <button className="btn btn-warning" onClick={this.shuffle(this.state.characters)}>
-            Shuffle
-          </button> */}
+
           <div className="row">
             {this.state.characters.map(character => (
               <Card
-                handleIncrement={this.handleIncrement}
+                handleClick={this.handleClick}
                 id={character.id}
                 key={character.id}
                 name={character.name}
