@@ -17,10 +17,22 @@ class App extends React.Component {
     } else {
       this.setState({ score: this.state.score + 1 });
     }
+
+    this.shuffle(this.state.characters)
   };
 
   handleReset = () => {
     this.setState({ score: 0 });
+  }
+
+  shuffle = (array) => {
+
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+      [array[i], array[j]] = [array[j], array[i]]; // swap elements
+    }
+
+    this.setState({ character: array });
   }
 
   render() {
@@ -36,6 +48,9 @@ class App extends React.Component {
           <button className="btn btn-secondary" onClick={this.handleReset}>
             Reset
           </button>
+          {/* <button className="btn btn-warning" onClick={this.shuffle(this.state.characters)}>
+            Shuffle
+          </button> */}
           <div className="row">
             {this.state.characters.map(character => (
               <Card
