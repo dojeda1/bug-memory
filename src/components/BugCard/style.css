@@ -1,0 +1,8 @@
+img {
+    width:200px;
+    height: 200px;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin: auto;    
+    display: block;
+}

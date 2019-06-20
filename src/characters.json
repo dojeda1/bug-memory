@@ -1,42 +1,62 @@
 [
     {
         "id": 1,
-        "name": "lights",
-        "image": "https://www.w3schools.com/w3css/img_lights.jpg"
+        "name": "ant",
+        "image": "./images/ant.jpg"
     },
     {
         "id": 2,
-        "name": "bridge",
-        "image": "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        "name": "bee",
+        "image": "./images/bee.jpg"
     },
     {
         "id": 3,
-        "name": "mountain",
-        "image": "https://www.w3schools.com/howto/img_snow.jpg"
+        "name": "butterfly",
+        "image": "./images/butterfly.jpg"
     },
     {
         "id": 4,
-        "name": "Swan",
-        "image": "https://html5box.com/html5gallery/images/Swan_1024.jpg"
+        "name": "green beetle",
+        "image": "./images/green-beetle.jpg"
     },
     {
         "id": 5,
-        "name": "river",
-        "image": "https://media.macphun.com/img/uploads/uploads/skylum/luminar/Raffaele-Cabras_5-bef.jpg?size=1x&q=20"
+        "name": "hercules beetle",
+        "image": "./images/hercules-beetle.jpg"
     },
     {
         "id": 6,
-        "name": "unicorn",
-        "image": "http://themehall.com/preview/plain/wp-content/uploads/sites/3/2013/03/unicorn-wallpaper.jpg"
+        "name": "jumping spider",
+        "image": "./images/jumping-spider.jpg"
     },
     {
         "id": 7,
-        "name": "seaturtle",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNGOOCZkMys2FeEgits8XM3_-VDKwf8nCfwm6soK-PsUHUSjpdA"
+        "name": "ladybug",
+        "image": "./images/ladybug.jpg"
     },
     {
         "id": 8,
-        "name": "bear",
-        "image": "https://i.dailymail.co.uk/i/pix/2016/03/22/13/32738A6E00000578-3504412-image-a-6_1458654517341.jpg"
+        "name": "mantis",
+        "image": "./images/mantis.jpg"
+    },
+    {
+        "id": 9,
+        "name": "snail",
+        "image": "./images/snail.jpg"
+    },
+    {
+        "id": 10,
+        "name": "spider",
+        "image": "./images/spider.jpg"
+    },
+    {
+        "id": 11,
+        "name": "tailless scorpion",
+        "image": "./images/tailless-scorpion.jpg"
+    },
+    {
+        "id": 12,
+        "name": "white beetle",
+        "image": "./images/white-beetle.jpg"
     }
 ]

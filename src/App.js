@@ -1,5 +1,6 @@
 import React from "react";
-import Card from "./components/Card";
+import Title from "./components/Title";
+import BugCard from "./components/BugCard";
 import characters from "./characters.json";
 
 class App extends React.Component {
@@ -52,13 +53,13 @@ class App extends React.Component {
     return (
 
       <div>
+        <Title score={this.state.score} highScore={this.state.highScore} />
         <div className="container">
-          <p>Score: {this.state.score}</p>
-          <p>High Score: {this.state.highScore}</p>
 
-          <div className="row">
+          <div className="p-5"></div>
+          <div className="row pb-5">
             {this.state.characters.map(character => (
-              <Card
+              <BugCard
                 handleClick={this.handleClick}
                 id={character.id}
                 key={character.id}
