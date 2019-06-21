@@ -5,4 +5,10 @@ img {
     padding: 10px;
     margin: auto;    
     display: block;
+    cursor: pointer;
+}
+
+img:hover {
+    background-color: rgb(255, 230, 0);
+    padding: 3px;
 }

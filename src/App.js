@@ -1,19 +1,24 @@
 import React from "react";
 import Title from "./components/Title";
 import BugCard from "./components/BugCard";
-import characters from "./characters.json";
+import bugs from "./bugs.json";
 
 class App extends React.Component {
   // Initial state
   state = {
     score: 0,
     highScore: 0,
-    characters,
-    chosen: []
+    bugs,
+    chosen: [],
+    gameStarted: false
   };
 
   // Increments score by 1
   handleClick = (event) => {
+
+    if (this.state.gameStarted === false) {
+      this.setState({ gameStarted: true });
+    }
 
     const id = event.target.getAttribute('data-id');
     console.log("id: " + id);
@@ -37,7 +42,7 @@ class App extends React.Component {
 
     }
 
-    this.shuffle(this.state.characters);
+    this.shuffle(this.state.bugs);
   };
 
   shuffle = (array) => {
@@ -53,18 +58,18 @@ class App extends React.Component {
     return (
 
       <div>
-        <Title score={this.state.score} highScore={this.state.highScore} />
+        <Title score={this.state.score} highScore={this.state.highScore} gameStarted={this.state.gameStarted} />
         <div className="container">
 
           <div className="p-5"></div>
           <div className="row pb-5">
-            {this.state.characters.map(character => (
+            {this.state.bugs.map(bug => (
               <BugCard
                 handleClick={this.handleClick}
-                id={character.id}
-                key={character.id}
-                name={character.name}
-                image={character.image}
+                id={bug.id}
+                key={bug.id}
+                name={bug.name}
+                image={bug.image}
               />
             ))}
           </div>
