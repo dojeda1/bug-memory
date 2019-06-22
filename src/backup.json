@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "ant",
+        "image": "./images/ant.jpg"
+    },
+    {
+        "id": 2,
+        "name": "bee",
+        "image": "./images/bee.jpg"
+    },
+    {
+        "id": 3,
+        "name": "butterfly",
+        "image": "./images/butterfly.jpg"
+    },
+    {
+        "id": 4,
+        "name": "green beetle",
+        "image": "./images/green-beetle.jpg"
+    },
+    {
+        "id": 5,
+        "name": "hercules beetle",
+        "image": "./images/hercules-beetle.jpg"
+    },
+    {
+        "id": 6,
+        "name": "jumping spider",
+        "image": "./images/jumping-spider.jpg"
+    },
+    {
+        "id": 7,
+        "name": "ladybug",
+        "image": "./images/ladybug.jpg"
+    },
+    {
+        "id": 8,
+        "name": "mantis",
+        "image": "./images/mantis.jpg"
+    },
+    {
+        "id": 9,
+        "name": "snail",
+        "image": "./images/snail.jpg"
+    },
+    {
+        "id": 10,
+        "name": "spider",
+        "image": "./images/spider.jpg"
+    },
+    {
+        "id": 11,
+        "name": "tailless scorpion",
+        "image": "./images/tailless-scorpion.jpg"
+    },
+    {
+        "id": 12,
+        "name": "white beetle",
+        "image": "./images/white-beetle.jpg"
+    }
+]

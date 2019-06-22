@@ -1,5 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Rancho&display=swap');
+/* font-family: 'Rancho', cursive; */
+
 .title {
     background-color: #12834e;
     color: white;
-    font-size: 150%;
+    font-size: 200%;
+    font-family: 'Rancho', cursive;
 } 
+
+.flash-red {
+    animation: flash-red .5s;
+    animation-iteration-count: 1;
+}
+
+.flash-yellow {
+     animation: flash-yellow .5s;
+    animation-iteration-count: 1;
+}
+
+.flash-blue {
+    animation: flash-blue .5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes flash-red {
+    0% {color: white;}
+    50% {color: red;}
+    100% {color: white;}
+}
+@keyframes flash-yellow {
+    0% {color: white;}
+    50% {color: yellow;}
+    100% {color: white;}
+}
+@keyframes flash-blue {
+    0% {color: white;}
+    50% {color: blue;}
+    100% {color: white;}
+}
+
+@media only screen and (max-width: 768px) {
+    .title {
+        font-size: 150%;
+    }
+    .mid-text {
+        display: none;
+    }
+}

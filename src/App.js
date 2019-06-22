@@ -28,7 +28,15 @@ class App extends React.Component {
 
       this.setState({ score: 0, chosen: [] });
 
+      setTimeout(
+        function () {
+          this.shuffle(this.state.bugs);
+          this.setState({ gameStarted: false });
+        }
+          .bind(this), 2000);
+
     } else {
+
       console.log("not yet chosen");
 
       this.state.chosen.push(id);
@@ -40,10 +48,20 @@ class App extends React.Component {
         this.setState({ score: this.state.score + 1 });
       }
 
-    }
+      if (this.state.score < bugs.length - 1) {
+        this.shuffle(this.state.bugs);
+      } else {
+        console.log("You Win");
+        setTimeout(
+          function () {
+            this.shuffle(this.state.bugs);
+            this.setState({ gameStarted: false, score: 0, chosen: [] });
+          }
+            .bind(this), 2000);
+      }
 
-    this.shuffle(this.state.bugs);
-  };
+    };
+  }
 
   shuffle = (array) => {
 
@@ -52,16 +70,24 @@ class App extends React.Component {
       [array[i], array[j]] = [array[j], array[i]]; // swap elements
     }
 
-  }
+  };
 
   render() {
     return (
 
       <div>
-        <Title score={this.state.score} highScore={this.state.highScore} gameStarted={this.state.gameStarted} />
+        <Title
+          score={this.state.score}
+          highScore={this.state.highScore}
+          gameStarted={this.state.gameStarted}
+          arrLength={this.state.bugs.length}
+        />
         <div className="container">
 
           <div className="p-5"></div>
+          <div className="text-white text-center">
+            <h4>Don't click the same bug twice!</h4>
+          </div>
           <div className="row pb-5">
             {this.state.bugs.map(bug => (
               <BugCard
@@ -70,6 +96,9 @@ class App extends React.Component {
                 key={bug.id}
                 name={bug.name}
                 image={bug.image}
+                score={this.state.score}
+                gameStarted={this.state.gameStarted}
+                arrLength={this.state.bugs.length}
               />
             ))}
           </div>
