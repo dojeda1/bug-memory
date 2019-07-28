@@ -6,6 +6,8 @@ Test your memory by selecting every bug card without choosing the same one twice
 
   **Visit Web App [Here!](https://memory-game-react-click.herokuapp.com/)**
 
+![Web App Image](./demo.png)
+
 ### Technologies used
 
 * HTML
